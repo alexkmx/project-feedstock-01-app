@@ -1,85 +1,78 @@
 const Router = require('express').Router;
+const FormMatPrim = require('../models/FormMatPrim.js');
+const Formulas = require('../models/Formulas.js');
+const MateriasPrimas = require('../models/MateriasPrimas.js');
+const Proveedores = require('../models/Proveedores.js');
+const ProdAseProf = require('../models/ProdAsesoresProfesionales.js');
+const ProdGreffex = require('../models/ProdGreffex.js');
+const ProdGpoMerk = require('../models/ProdGrupoMerk.js');
+const ProdProdPracticos = require('../models/ProdProductosPracticos.js');
+const ProdServEmpre = require('../models/ProdServiciosEmpresariales')
 
 const apiRouter = Router();
 
 function getForMatPrim(req, res) {
-   const {db} = req.app.locals.db;
+   FormMatPrim
 
-   db
-    .select()
-    .table('formulas_matprim')
+    .query()
     .then(data => res.json(data));
 }
 
 function getAllFormulas(req, res) {
-   const {db} = req.app.locals.db;
+   Formulas
 
-   db
-    .select()
-    .table('formulas')
+    .query()
+    .eager('formulas_matprim')
     .then(data => res.json(data));
 }
 
 function getAllMatPrim(req, res) {
-   const {db} = req.app.locals.db;
+   MateriasPrimas
 
-   db
-    .select()
-    .table('materiasprimas')
+    .query()
+    .eager('formulas_matprim')
     .then(data => res.json(data));
 }
 
 function getAllProve(req, res){
-  const {db} = req.app.locals;
+  Proveedores
 
-  db
-  .select()
-  .table('proveedores')
-  .then(data => res.json(data));
-}
-
-function getProdGrupMerk(req, res){
-  const {db} = req.app.locals;
-
-  db
-  .select()
-  .table('productos_grupomerk')
-  .then(data => res.json(data));
-}
-
-function getProdGreffex(req, res){
-  const {db} = req.app.locals;
-
-  db
-  .select()
-  .table('productos_greffex')
+  .query()
   .then(data => res.json(data));
 }
 
 function getProdAseProf(req, res){
-  const {db} = req.app.locals;
+  ProdAseProf
 
-  db
-  .select()
-  .table('productos_asesoresprofesionales')
+  .query()
+  .then(data => res.json(data));
+}
+
+function getProdGreffex(req, res){
+  ProdGreffex
+
+  .query()
+  .then(data => res.json(data));
+}
+
+function getProdGrupMerk(req, res){
+  ProdGpoMerk
+
+  .query()
   .then(data => res.json(data));
 }
 
 function getProdProdPract(req, res){
-  const {db} = req.app.locals;
+  ProdProdPracticos
 
-  db
-  .select()
-  .table('productos_productospracticos')
+  .query()
   .then(data => res.json(data));
 }
 
 function getProdServEmp(req, res){
-  const {db} = req.app.locals;
+  ProdServEmpre
 
-  db
-  .select()
-  .table('productos_serviciosempresariales')
+  .query()
   .then(data => res.json(data));
 }
 
@@ -88,9 +81,9 @@ apiRouter
   .get('/formulas', getAllFormulas)
   .get('/materiasprimas', getAllMatPrim)
   .get('/proveedores', getAllProve)
-  .get('/grupomerk', getProdGrupMerk)
-  .get('/greffex', getProdGreffex)
   .get('/asesoresprofesionales', getProdAseProf)
+  .get('/greffex', getProdGreffex)
+  .get('/grupomerk', getProdGrupMerk)
   .get('/productospracticos', getProdProdPract)
   .get('/serviciosempresariales', getProdServEmp);
 
