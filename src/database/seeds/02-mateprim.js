@@ -119,13 +119,6 @@ const dataRows = [
     precio_mx_peso: 0.00,
     existencia_almacen: 190.43,
   },{
-    nombre_comercial: 'agua desmineralizada',
-    nombre_quimico: 'agua desmin',
-    unidad: 'Lt.',
-    precio_us_dll: 0.08,
-    precio_mx_peso: 0.00,
-    existencia_almacen: 245.23,
-  },{
     nombre_comercial: 'extractos vegetales',
     nombre_quimico: 'extractos vegetales',
     unidad: 'Lt.',
@@ -133,8 +126,8 @@ const dataRows = [
     precio_mx_peso: 0.00,
     existencia_almacen: 0.94,
   },{
-    nombre_comercial: 'anticeramida',
-    nombre_quimico: 'anticeramida',
+    nombre_comercial: 'acticeramida',
+    nombre_quimico: 'acticeramida',
     unidad: 'Kg.',
     precio_us_dll: 2.58,
     precio_mx_peso: 0.00,
@@ -149,6 +142,13 @@ const dataRows = [
   },{
     nombre_comercial: 'aceite de jojoba',
     nombre_quimico: 'aceite de jojoba',
+    unidad: 'Lt.',
+    precio_us_dll: 4.08,
+    precio_mx_peso: 0.00,
+    existencia_almacen: 5.32,
+  },{
+    nombre_comercial: 'aceite de germen de trigo',
+    nombre_quimico: 'aceite de germen de trigo',
     unidad: 'Lt.',
     precio_us_dll: 4.08,
     precio_mx_peso: 0.00,

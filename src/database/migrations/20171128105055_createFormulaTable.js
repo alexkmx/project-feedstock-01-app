@@ -8,7 +8,6 @@ exports.up = function(knex, Promise) {
       table.string('base');
       table.string('nombre');
       table.string('unidad');
-      table.float('porcentaje');
       table.float('totalunidad');
     });
 };

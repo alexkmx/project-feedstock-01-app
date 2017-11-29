@@ -1,11 +1,18 @@
 const Router = require('express').Router;
-const MateriaPrima = require('../models/MateriaPrima.js');
-const Formulas = require('../models/Formula.js');
 
 const apiRouter = Router();
 
+function getForMatPrim(req, res) {
+   const {db} = req.app.locals.db;
+
+   db
+    .select()
+    .table('formulas_matprim')
+    .then(data => res.json(data));
+}
+
 function getAllFormulas(req, res) {
-   const db = req.app.locals.db;
+   const {db} = req.app.locals.db;
 
    db
     .select()
@@ -13,10 +20,12 @@ function getAllFormulas(req, res) {
     .then(data => res.json(data));
 }
 
-function getAllMatPrim (req, res) {
-  MateriaPrima
+function getAllMatPrim(req, res) {
+   const {db} = req.app.locals.db;
 
-    .query()
+   db
+    .select()
+    .table('materiasprimas')
     .then(data => res.json(data));
 }
 
@@ -75,6 +84,7 @@ function getProdServEmp(req, res){
 }
 
 apiRouter
+  .get('/formulas_materiaprima', getForMatPrim)
   .get('/formulas', getAllFormulas)
   .get('/materiasprimas', getAllMatPrim)
   .get('/proveedores', getAllProve)
