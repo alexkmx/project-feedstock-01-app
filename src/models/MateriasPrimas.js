@@ -4,16 +4,33 @@ class MateriasPrimas extends Model {
   static get tableName () {
     return 'materiasprimas';
   }
+
+  // static get relationMappings(){
+  //   const FormMatPrim = require('./FormMatPrim.js');
+  //
+  //   return {
+  //     formulas_matprim:{
+  //       relation: Model.HasManyRelation,
+  //       modelClass: FormMatPrim,
+  //       join: {
+  //         from: 'materiasprimas.id',
+  //         to: 'formulas_matprim.materiasprimasId',      //Creo la relación de usuario y modelo de twe
+  //
+  //       }
+  //     }
+  //   };
+  // }
+
   static get relationMappings(){
-    const FormMatPrim = require('./FormMatPrim.js');
+    const MatPrimxProv = require('../models/MatPrimxProv.js');
 
     return {
-      formulas_matprim:{
+      matprimxprov:{
         relation: Model.HasManyRelation,
-        modelClass: FormMatPrim,
+        modelClass: MatPrimxProv,
         join: {
           from: 'materiasprimas.id',
-          to: 'formulas_matprim.materiasprimasId',      //Creo la relación de usuario y modelo de twe
+          to: 'matprimxprov.materiasprimasId',      //Creo la relación de usuario y modelo de twe
 
         }
       }
