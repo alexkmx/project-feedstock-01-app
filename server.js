@@ -1,11 +1,14 @@
 const express = require('express');
 const fs = require('fs-extra');
+const helmet = require('helmet');
 const pageRouter = require('./src/routes/pageRouter.js');
 const apiRouter = require('./src/routes/apiRouter.js');
 const connectToDb = require('./src/database/dbConnect.js');
 const dbConfigObj = require('./knexfile.js');   //Importo el archivo
 const ejs = require('ejs');
 const {Model} = require ('objection');
+const bodyParser = require('body-parser');
+
 
 
 const app = express();
@@ -14,6 +17,11 @@ const appDb = connectToDb(dbConfigObj.development);
 
 Model.knex(appDb);
 app.locals.db = appDb;
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use(helmet());
 
 const PATH = `${__dirname}/src/views/home.html`;
 
