@@ -393,7 +393,7 @@ apiRouter
   .post('/proveedores', createProv)      //Crea nuevo proveedor
   .put('/proveedores/:id', updateProvById)  //Me actualiza un proveedor
   .delete('/proveedores/:id', deleteProvById)  //Elimina proveedor
-  .delete('/proveedores/:id', deleteProvAndRelatedMatPrimById);  //Elimina proveedor y materias primas relacionadas
+  .delete('/proveedores/:id', deleteProvAndRelatedMatPrimById)  //Elimina proveedor y materias primas relacionadas
 
 //ENDPONT TABLA RELACIONES
 

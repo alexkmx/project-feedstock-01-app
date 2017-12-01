@@ -8,7 +8,15 @@ const dbConfigObj = require('./knexfile.js');   //Importo el archivo
 const ejs = require('ejs');
 const {Model} = require ('objection');
 const bodyParser = require('body-parser');
+const authRouter = require('./src/routes/authRouter.js');  //Debajo de const apiRoputer = require
 
+
+const passport = require('passport');
+const cookieSession = require('cookie-session');
+const cookieParser = require('cookie-parser');
+
+const registerLocalStrategy = require('./src/middleware/passport-local--registerLocalStrategy.js');
+const { configDeserializeUser, configSerializeUser } = require('./src/helpers/passport-local--sessionActions.js');
 
 
 const app = express();
@@ -21,6 +29,20 @@ app.locals.db = appDb;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(cookieParser());
+app.use(cookieSession({
+  name: 'cookiemonster',    //Aqui le paso el nombre de valor que quiera
+  secret: 'superdupersupersecret',
+  httpOnly: true,
+  signed: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(registerLocalStrategy());
+passport.serializeUser(configSerializeUser());
+passport.deserializeUser(configDeserializeUser());
+
 app.use(helmet());
 
 const PATH = `${__dirname}/src/views/home.html`;
@@ -28,12 +50,18 @@ const PATH = `${__dirname}/src/views/home.html`;
 app.use('/', pageRouter);
 app.use('/api/v1', apiRouter);
 app.use('/api/v1/productos', apiRouter);
+app.use('/auth', authRouter);
 
 app.engine('ejs', ejs.renderFile);
 app.set('view engine','ejs');
 app.set('views', `${__dirname}/src/views`);
 
+
 app.use(express.static(`${__dirname}/public`))
+
+app.use((req, res)=>{
+  res.render('reactApp.ejs')
+})
 
 app.use((req, res) => {
   res.send('<h1>404. Not found.</h1>')
