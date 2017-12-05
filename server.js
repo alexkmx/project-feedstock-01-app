@@ -9,6 +9,8 @@ const ejs = require('ejs');
 const {Model} = require ('objection');
 const bodyParser = require('body-parser');
 const authRouter = require('./src/routes/authRouter.js');  //Debajo de const apiRoputer = require
+const reactApp = require('./src/views/reactApp.ejs');
+
 
 
 const passport = require('passport');
@@ -47,7 +49,7 @@ app.use(helmet());
 
 const PATH = `${__dirname}/src/views/home.html`;
 
-app.use('/', pageRouter);
+app.use('/', reactApp);
 app.use('/api/v1', apiRouter);
 app.use('/api/v1/productos', apiRouter);
 app.use('/auth', authRouter);
@@ -63,9 +65,9 @@ app.use((req, res)=>{
   res.render('reactApp.ejs')
 })
 
-app.use((req, res) => {
-  res.send('<h1>404. Not found.</h1>')
-});
+// app.use((req, res) => {
+//   res.send('<h1>404. Not found.</h1>')
+// });
 
 // app.use('/', (req, res) => {
 //   fs
