@@ -1,0 +1,11 @@
+.form {
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.inicio_btn {
+  padding-top: 30px;
+}

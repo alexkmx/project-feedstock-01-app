@@ -11,6 +11,8 @@ import Nav from './components/Nav';
 import Formulas from './components/Formulas';
 import Materiasprimas from './components/Materiasprimas';
 import Home from './components/home';
+import MateriaPrimaForm from './components/materiaprimaform';
+import ProveedorForm from './components/registroproveedornuevo';
 
 
 const DynamicRoute = (props) => {
@@ -31,6 +33,8 @@ class App extends React.Component {
       <Route path = '/nav' component={Nav}/>
       <Route path = '/formulas' component={Formulas}/>
       <Route path = '/materiasprimas' component={Materiasprimas}/>
+      <Route path = '/registromateriaprima' component={MateriaPrimaForm}/>
+      <Route path = '/registroproveedor' component={ProveedorForm}/>
       <Route component={NoMatch404}/>
     </Switch>
 

@@ -1,13 +1,9 @@
 //Dependencies
 import React, { Component } from 'react';
-
 import {Link} from 'react-router-dom';
 
 //Assets
-
-// import escritorio from "../imagenes/lab.jpg";
 import '../css/Header.css';
-
 
 class Header extends Component {
 
@@ -15,9 +11,8 @@ class Header extends Component {
     let {title, items} = this.props;
     return (
       <div className="header-container">
-      <h1>Header</h1>
-
-      <h2 className="title">{title}</h2>
+        <p>Header</p>
+        <h2 className="title">{title}</h2>
         <ul className="menu">
          {
            items && items.map(
