@@ -10,6 +10,7 @@ exports.up = function(knex, Promise) {
       table.string('unidad');
       table.float('precio_us_dll');
       table.float('precio_mx_peso');
+      table.float('cantidad');
       table.float('existencia_almacen');
     });
 };

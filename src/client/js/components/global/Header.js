@@ -4,21 +4,23 @@ import {Link} from 'react-router-dom';
 
 //Assets
 import '../css/Header.css';
+import {Navbar, NavItem} from 'react-materialize';
 
 class Header extends Component {
 
   render() {
-    let {title, items} = this.props;
+
     return (
       <div className="header-container">
-        <p>Header</p>
-        <h2 className="title">{title}</h2>
-        <ul className="menu">
-         {
-           items && items.map(
-             (item, key) => <li key={key}> <Link to={item.url}>{item.title}</Link></li>
-         )}
-        </ul>
+        <Navbar brand='Feedstock' right>
+          <NavItem href='/about'>About</NavItem>
+          <NavItem href='/formulas'>Formulas</NavItem>
+          <NavItem href='/materiasprimas'>Materias Primas</NavItem>
+          <NavItem href='/proveedores'>Proveedores</NavItem>
+          <NavItem href='/login'>Login</NavItem>
+          <NavItem href='/registromateriaprima'>Nueva Materia Prima</NavItem>
+          <NavItem href='/registroproveedor'>Nuevo Proveedor</NavItem>
+        </Navbar>
       </div>
     );
   }

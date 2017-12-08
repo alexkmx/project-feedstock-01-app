@@ -1,12 +1,15 @@
 import React from 'react';
-
+import {Card, CardTitle} from 'react-materialize';
+import maze from './imagenes/maze.jpg';
+import './css/NoMatch404.css';
 
 export default class NoMatch404 extends React.Component {
   render(){
-    return   <div className="header--404">
-        <h2 className="header--404__title">Page Not Found</h2>
-        <h2>ERROR -404-</h2>
+    return(
+      <div>
+        <h1>ERROR 404</h1>
         <a className="header--404__btn" href="/home">INICIO</a>
-      </div>
+       </div>
+    )
   }
 }

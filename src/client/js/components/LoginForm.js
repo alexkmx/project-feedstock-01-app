@@ -11,7 +11,8 @@ export default class LoginForm  extends React.Component {
           <input className="form__field" type="text" name="email" placeholder="Email"/>
           <input className="form__field" type="password" name="password" placeholder="Password"/>
           <input className="form__login-btn"type="submit" value="login"/>
-          <a className="header--404__btn" href="/home">INICIO</a>
+          <hr />
+          <a className="inicio_btn" href="/home">INICIO</a>
         </form>
       </div>
   }

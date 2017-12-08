@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 //Assets
 
-import '../css/Header.css';
+import '../css/Footer.css';
 
 
 class Footer extends Component {
@@ -25,4 +25,4 @@ class Footer extends Component {
   }
 }
 
-export default Header;
+export default Footer;

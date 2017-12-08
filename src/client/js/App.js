@@ -1,6 +1,10 @@
+//Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+
+
+//Assests
 import Header from './components/global/Header';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
@@ -13,7 +17,8 @@ import Materiasprimas from './components/Materiasprimas';
 import Home from './components/home';
 import MateriaPrimaForm from './components/materiaprimaform';
 import ProveedorForm from './components/registroproveedornuevo';
-
+import Graficas from './components/Graficas';
+import Reportes from './components/Reportes';
 
 const DynamicRoute = (props) => {
   const styleObj = {padding: '3rem', fontSize: '6vw', color: '#0E6655'}
@@ -35,6 +40,8 @@ class App extends React.Component {
       <Route path = '/materiasprimas' component={Materiasprimas}/>
       <Route path = '/registromateriaprima' component={MateriaPrimaForm}/>
       <Route path = '/registroproveedor' component={ProveedorForm}/>
+      <Route path = '/graficas' component={Graficas}/>
+      <Route path = '/reportes' component={Reportes}/>
       <Route component={NoMatch404}/>
     </Switch>
 

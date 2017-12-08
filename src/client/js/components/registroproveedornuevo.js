@@ -41,9 +41,9 @@ export default class ProveedorForm  extends React.Component {
   render(){
 
     return  <div className="proveedor-form-container">
-        <Header />
+        
         <form onSubmit={this.handleSubmitInfo} className = "form">
-          <h3>Ingresa Materia Prima Nueva</h3>
+          <h3>Registro proveedor nuevo</h3>
           <input className="form__field"
             type="text"
             ref="razon_social"

@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Home',
-    url:'/'
+    url:'/home'
   },{
     title: 'About',
     url:'/about'
@@ -9,8 +9,8 @@ export default [
     title: 'Formulas',
     url:'/formulas'
   },{
-    title: 'Almacén',
-    url:'/almacen'
+    title: 'Materias Primas',
+    url:'/materiasprimas'
   },{
     title: 'Proveedores',
     url:'/proveedores'

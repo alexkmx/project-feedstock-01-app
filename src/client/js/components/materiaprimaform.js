@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from './global/Header';
 import request from 'superagent';
+import {Row, Input, Button} from 'react-materialize';
 
 //Assets
 import './css/mateprimform.css';
@@ -20,58 +21,43 @@ export default class MateriaPrimaForm  extends React.Component {
       .post('/api/v1/materiasprimas')
       .send(datos)
       .then(data => {
-console.log(data);
+
       })
     }
 
   handleSubmit(e){
     e.preventDefault();
-
-    this.handleMateriaPrimaRegister({
-      nombre_comercial: this.refs.nombre_comercial.value,
-      nombre_quimico: this.refs.nombre_quimico.value,
-      unidad: this.refs.unidad.value,
-      precio_us_dll: this.refs.precio_us_dll.value,
-      precio_mx_peso: this.refs.precio_mx_peso.value,
-      existencia_almacen: this.refs.existencia_almacen.value,
-    })
+console.log(e);
+    // this.handleMateriaPrimaRegister({
+    //
+    //   nombre_comercial: this.refs.nombre_comercial.value,
+    //   nombre_quimico: this.refs.nombre_quimico.value,
+    //   unidad: this.refs.unidad.value,
+    //   precio_us_dll: this.refs.precio_us_dll.value,
+    //   precio_mx_peso: this.refs.precio_mx_peso.value,
+    //   cantidad: this.refs.cantidad.value,
+    // })
   }
 
   render(){
-console.log(this.refs.nombre_quimico);
-    return  <div className="materia-prima-form-container">
-        <Header />
-        <form onSubmit={this.handleSubmit} className = "form">
-          <h3>Ingresa Materia Prima Nueva</h3>
-          <input className="form__field"
-            type="text"
-            ref="nombre_comercial"
-            placeholder="Nombre comercial(sin acentos, comas, caracteres especiales)" required/>
-          <input className="form__field"
-            type="text"
-            ref="nombre_quimico"
-            placeholder="Nombre químico(sin acentos, comas, caracteres especiales)"/>
-          <input className="form__field"
-            type="text"
-            ref="unidad"
-            placeholder="Unidad(Kg/Lt/Pza)"/>
-          <input className="form__field"
-            type="text"
-            ref="precio_us_dll"
-            placeholder="Precio US DLL(sin signo de pesos, con punto y hasta dos decimales)"/>
-          <input className="form__field"
-            type="text"
-            ref="precio_mx_peso"
-            placeholder="Precio MX PESO(sin signo de pesos, con punto y hasta dos decimales)"/>
-          <input className="form__field"
-            type="number"
-            ref="existencia_almacen"
-            placeholder="Existencia Almacén(puede ingresar punto y hasta dos decimales)"/>
-          <input className="form__login-btn"
-            type="submit"
-            value="Registrar"/>
-          <a className="inicio_btn" href="/home">INICIO</a>
-        </form>
+
+    return(
+      <div className="materia-prima-form-container">
+
+      <form onSubmit={this.handleSubmit} className = "form">
+      <h4>Ingresa Materia Prima Nueva</h4>
+        <Row>
+		     <Input ref="nombre_comercial" type="text" label="Nombre Comercial" s={12} />
+		     <Input ref="nombre_quimico" type="text" label="Nombre Químico" s={12} />
+		     <Input ref="unidad" type="text" label="Unidad" s={12} />
+         <Input ref="precio_us_dll" type="text" label="Precio US dll" s={12} />
+         <Input ref="precio_mx_peso" type="text" label="Precio MX peso" s={12} />
+         <Input ref="cantidad" type="text" label="Cantidad que ingresa" s={12} />
+         <Button type="submit" waves='light' value="registrar">button</Button>
+      </Row>
+      </form>
+
       </div>
+    )
   }
 }
