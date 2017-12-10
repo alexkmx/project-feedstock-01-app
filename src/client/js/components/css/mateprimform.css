@@ -1,9 +1,10 @@
 .form {
   margin: 0 auto;
-  width: 40%;
-  display: flex;
-  flex-wrap: wrap;
+  width: 80%;
+  /*display: flex;
+  flex-wrap: wrap;*/
   flex-direction: column;
+  color: white;
 }
 
 .inicio_btn {

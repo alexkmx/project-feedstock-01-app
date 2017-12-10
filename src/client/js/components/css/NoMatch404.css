@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.container-error {
+  color: red;
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'Anton', sans-serif;
+
+}
+
+.container-error p{
+margin: 0 auto;
+color: black;
+font-family: 'Nunito', sans-serif;
+}

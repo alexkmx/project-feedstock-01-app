@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2|Lobster');
 
+body {
+  background-color: #0454BB;
+}
+
 .image-container {
   width: 100%;
 
@@ -9,7 +13,7 @@
   width: 100%;
   height: 550px;
   margin: 0 auto;
-  opacity: 0.7;
+  opacity: 0.3;
   position: relative;
   }
 
