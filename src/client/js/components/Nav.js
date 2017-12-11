@@ -24,12 +24,13 @@ export default class Nav extends React.Component {
       return (
         <div className="nav-container">
             <div className="navbar-registrado">
-            <Navbar brand='Feedstock' right>
+            <Navbar brand='' right>
               <NavItem href='/about'>About</NavItem>
               <NavItem href='/formulas'>Formulas</NavItem>
               <NavItem href='/materiasprimas'>Materias Primas</NavItem>
               <NavItem href='/proveedores'>Proveedores</NavItem>
-              <NavItem href='/register'>Registar Usuario</NavItem>
+              <NavItem href='/registromateriaprima'>Registrar Materia Prima</NavItem>
+              <NavItem href='/registroproveedor'>Registrar Proveedor</NavItem>
               <NavItem onClick={this.logOut}>Logout</NavItem>
             </Navbar>
             </div>
@@ -38,8 +39,7 @@ export default class Nav extends React.Component {
     }else if(typeof this.props.usarioAutenticado.email === 'admin@feedstock.com') {
       <div>
         <Navbar brand='Feedstock' right>
-          <NavItem href='/registromateriaprima'>Registrar Materia Prima</NavItem>
-          <NavItem href='/registroproveedor'>Registrar Proveedor</NavItem>
+
           <NavItem href='/register'>Registar Usuario</NavItem>
           <NavItem onClick={this.logOut}>Logout</NavItem>
         </Navbar>
@@ -47,17 +47,15 @@ export default class Nav extends React.Component {
     }
 
     // if user is NOT authtenticated
-    return   <div className="navbar-noregistrado">
-
-        <div>
-        <Navbar brand='Feedstock' right>
-        <NavItem href='/about'>About</NavItem>
-        <NavItem href='/login'>Iniciar Sesión</NavItem>
-        </Navbar>
+    return (
+      <div className="navbar-noregistrado">
+          <div className="navbar-sinregistrar">
+            <Navbar brand='Feedstock' right>
+            <NavItem href='/about'>About</NavItem>
+            <NavItem href='/login'>Iniciar Sesión</NavItem>
+            </Navbar>
+          </div>
         </div>
-
-      </div>
-
-
+    )
   }
 }

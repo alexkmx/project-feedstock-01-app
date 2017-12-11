@@ -60,7 +60,8 @@ class App extends React.Component {
           .then(() => {
             console.log('logout!!!');
             this.setState({
-              usarioAutenticado: {}
+              usarioAutenticado: {},
+              
             });
           })
           .catch(err => console.log(err));
@@ -75,6 +76,7 @@ class App extends React.Component {
         console.log('Active Session - USER:', user);
         this.setState({
           usarioAutenticado: typeof user === "object" && user.email ? user : {}
+
         });
       })
       .catch(err => console.log(err));

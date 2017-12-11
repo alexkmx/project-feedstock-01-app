@@ -12,9 +12,9 @@ export default class Home extends React.Component {
   render() {
     return(
     <div className="home-container">
-      
       <div className="image-container">
-      <img src={lab} alt="imagen" />
+      <h3 className="title-home">Feedstock</h3>
+      <img src={lab} alt="imagen" className="imagen"/>
       </div>
     </div>
     )

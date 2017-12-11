@@ -37,7 +37,7 @@ export default class MateriaPrimaForm  extends React.Component {
       unidad: this.refs.unidad.input.defaultValue,
       precio_us_dll: this.refs.precio_us_dll.input.defaultValue,
       precio_mx_peso: this.refs.precio_mx_peso.input.defaultValue,
-      cantidad: this.refs.cantidad.input.defaultValue,
+      existencia_almacen: this.refs.existencia_almacen.input.defaultValue,
     })
   }
 
@@ -53,7 +53,7 @@ export default class MateriaPrimaForm  extends React.Component {
   		     <Input ref="unidad" type="text" label="Unidad" s={4} />
            <Input ref="precio_us_dll" type="text" label="Precio US dll" s={4} />
            <Input ref="precio_mx_peso" type="text" label="Precio MX peso" s={4} />
-           <Input ref="cantidad" type="text" label="Cantidad que ingresa" s={4} />
+           <Input ref="existencia_almacen" type="text" label="Cantidad que ingresa" s={4} />
           </Row>
         <Button type="submit" waves='light' value="registrar">AGREGAR A LA BASE DE DATOS</Button>
        </form>

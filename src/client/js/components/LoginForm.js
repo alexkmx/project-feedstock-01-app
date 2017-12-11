@@ -9,7 +9,9 @@ import {Button, Icon, Input, Row} from 'react-materialize';
 
 
 export default class LoginForm  extends React.Component {
-
+  componentDidMount() {
+   this.refs.email.input.focus();  
+  }
 
   constructor() {
     super();
