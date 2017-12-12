@@ -25,7 +25,6 @@ export default class Nav extends React.Component {
         <div className="nav-container">
             <div className="navbar-registrado">
             <Navbar brand='' right>
-              <NavItem href='/about'>About</NavItem>
               <NavItem href='/formulas'>Formulas</NavItem>
               <NavItem href='/materiasprimas'>Materias Primas</NavItem>
               <NavItem href='/proveedores'>Proveedores</NavItem>
@@ -39,7 +38,6 @@ export default class Nav extends React.Component {
     }else if(typeof this.props.usarioAutenticado.email === 'admin@feedstock.com') {
       <div>
         <Navbar brand='Feedstock' right>
-
           <NavItem href='/register'>Registar Usuario</NavItem>
           <NavItem onClick={this.logOut}>Logout</NavItem>
         </Navbar>

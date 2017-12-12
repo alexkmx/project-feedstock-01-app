@@ -10,7 +10,7 @@ import {Button, Icon, Input, Row} from 'react-materialize';
 
 export default class LoginForm  extends React.Component {
   componentDidMount() {
-   this.refs.email.input.focus();  
+   this.refs.email.input.focus();
   }
 
   constructor() {
@@ -35,8 +35,8 @@ export default class LoginForm  extends React.Component {
       <form onSubmit={this.handleSubmit} className="form">
         <h3>Ingresar</h3>
         <Row>
-          <Input ref="email" type="text" label="Email" s={12} />
-          <Input ref="password" type="text" label="password" s={12} />
+          <Input ref="email" type="email" label="Email" s={12} required/>
+          <Input ref="password" type="password" label="password" s={12} required/>
         </Row>
           <Button type="submit" waves='light' value="registrar">Ingresar</Button>
       </form>

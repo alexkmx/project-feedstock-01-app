@@ -61,7 +61,7 @@ class App extends React.Component {
             console.log('logout!!!');
             this.setState({
               usarioAutenticado: {},
-              
+
             });
           })
           .catch(err => console.log(err));
@@ -83,6 +83,7 @@ class App extends React.Component {
   }
 
   render (){
+    
         return <div>
     <Nav
         cerrarSesion={this.handleLogout}

@@ -1,12 +1,14 @@
-.form {
+.form-matprim {
   margin: 0 auto;
-  width: 80%;
-  /*display: flex;
-  flex-wrap: wrap;*/
-  flex-direction: column;
+  width: 50%;
+  
   color: white;
 }
 
 .inicio_btn {
   padding-top: 30px;
+}
+
+.title {
+  color: white;
 }

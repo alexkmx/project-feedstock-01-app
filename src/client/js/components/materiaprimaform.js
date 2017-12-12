@@ -45,16 +45,18 @@ export default class MateriaPrimaForm  extends React.Component {
 
     return(
       <div className="materia-prima-form-container">
-        <form onSubmit={this.handleSubmit} className = "form">
+        <form onSubmit={this.handleSubmit} className="form-matprim">
+            <div className="title">
             <h4>Ingresa Materia Prima Nueva</h4>
-          <Row>
-  		     <Input ref="nombre_comercial" type="text" label="Nombre Comercial" s={12} />
-  		     <Input ref="nombre_quimico" type="text" label="Nombre Químico" s={12} />
+            </div>
+
+  		     <Input ref="nombre_comercial" type="text" label="Nombre Comercial" s={4} />
+  		     <Input ref="nombre_quimico" type="text" label="Nombre Químico" s={14} />
   		     <Input ref="unidad" type="text" label="Unidad" s={4} />
            <Input ref="precio_us_dll" type="text" label="Precio US dll" s={4} />
            <Input ref="precio_mx_peso" type="text" label="Precio MX peso" s={4} />
            <Input ref="existencia_almacen" type="text" label="Cantidad que ingresa" s={4} />
-          </Row>
+
         <Button type="submit" waves='light' value="registrar">AGREGAR A LA BASE DE DATOS</Button>
        </form>
         <Button waves='light' node='a' href="/home">Home<Icon left>home</Icon></Button>

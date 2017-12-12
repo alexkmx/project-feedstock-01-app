@@ -20,8 +20,8 @@ export default class about extends React.Component {
         <Slider>
 	       <Slide className="slide"
             src="true"
-        		title="Datos precisos cuando se requiren">
-        		<hr/>
+        		title="">
+        		<p>Datos precisos cuando se requieren</p>
             Imaginen tener el control de materias extraídas de la naturaleza que después usamos para elaborar productos de bienes de consumo.
 	       </Slide>
 	       <Slide className="slide"
