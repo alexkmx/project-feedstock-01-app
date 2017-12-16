@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.about-container {
+  width: 100%;
+}
+
+.tarjeta img {
+  width: 90%;
+  height: 150px;
+  margin-left: 60px ;
+}
+
+.card-title img{
+  width: 50%;
+  margin-left: 300px;
+}
+
+.slide {
+  color: black;
+  text-align: justify;
+}
+
+.span {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.span-container {
+  width:75%;
+  margin: 0 auto;
+}

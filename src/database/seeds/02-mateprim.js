@@ -5,6 +5,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 0.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 250.23,
   },{
     nombre_comercial: 'aceite',
@@ -12,6 +13,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 1.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 130.23,
   },{
     nombre_comercial: 'glicerina',
@@ -19,6 +21,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 1.18,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 45.12,
   },{
     nombre_comercial: 'acido estearico',
@@ -26,6 +29,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 0.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 30.54,
   },{
     nombre_comercial: 'alcohol cetilico',
@@ -33,6 +37,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 0.98,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 68.34,
   },{
     nombre_comercial: 'dimeticona',
@@ -40,6 +45,7 @@ const dataRows = [
     unidad: 'Kg.',
     precio_us_dll: 1.48,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 20.10,
   },{
     nombre_comercial: 'palmitrato de isopropilo',
@@ -47,6 +53,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 8.74,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 13.42,
   },{
     nombre_comercial: 'propilenglicol',
@@ -54,6 +61,7 @@ const dataRows = [
     unidad: 'Kg.',
     precio_us_dll: 3.80,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 32.20,
   },{
     nombre_comercial: 'sorbitol',
@@ -61,6 +69,7 @@ const dataRows = [
     unidad: 'Kg.',
     precio_us_dll: 2.91,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 18.21,
   },{
     nombre_comercial: 'carbomero',
@@ -68,6 +77,7 @@ const dataRows = [
     unidad: 'Kg.',
     precio_us_dll: 3.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 4.23,
   },{
     nombre_comercial: 'fragancia',
@@ -75,6 +85,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 24.88,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 1.3,
   },{
     nombre_comercial: 'conservador_1',
@@ -82,6 +93,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 6.43,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 28.23,
   },{
     nombre_comercial: 'conservador_2',
@@ -89,6 +101,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 6.38,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 12.12,
   },{
     nombre_comercial: 'edta',
@@ -96,6 +109,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 0.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 4.56,
   },{
     nombre_comercial: 'vitamina',
@@ -103,6 +117,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 10.71,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 19.46,
   },{
     nombre_comercial: 'alcohol deionizado',
@@ -110,6 +125,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 3.93,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 100.67,
   },{
     nombre_comercial: 'agua deionizada',
@@ -117,6 +133,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 2.98,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 190.43,
   },{
     nombre_comercial: 'extractos vegetales',
@@ -124,6 +141,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 4.34,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 0.94,
   },{
     nombre_comercial: 'acticeramida',
@@ -131,6 +149,7 @@ const dataRows = [
     unidad: 'Kg.',
     precio_us_dll: 2.58,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 0.00,
   },{
     nombre_comercial: 'pantenol',
@@ -138,6 +157,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 9.69,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 2.01,
   },{
     nombre_comercial: 'aceite de jojoba',
@@ -145,6 +165,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 4.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 5.32,
   },{
     nombre_comercial: 'aceite de germen de trigo',
@@ -152,6 +173,7 @@ const dataRows = [
     unidad: 'Lt.',
     precio_us_dll: 4.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 5.32,
   },{
     nombre_comercial: 'botella cristal 1 lt. tapa',
@@ -159,6 +181,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.20,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 32,
   },{
     nombre_comercial: 'botella cristal 500 ml. tapa',
@@ -166,6 +189,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.18,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 132,
   },{
     nombre_comercial: 'botella cristal 250 ml. tapa',
@@ -173,6 +197,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.08,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 12,
   },{
     nombre_comercial: 'botella cristal 1 lt. spray',
@@ -180,6 +205,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.28,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 42,
   },{
     nombre_comercial: 'botella cristal 500 ml. spray',
@@ -187,6 +213,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.21,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 16,
   },{
     nombre_comercial: 'botella cristal 250 ml. spray',
@@ -194,6 +221,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.12,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 252,
   },{
     nombre_comercial: 'tarro nacarado 300ml Modelo odissey',
@@ -201,6 +229,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.48,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 22,
   },{
     nombre_comercial: 'tarro nacarado 150ml Modelo sunrise',
@@ -208,6 +237,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.28,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 0,
   },{
     nombre_comercial: 'empaque carton p/tarro odissey',
@@ -215,6 +245,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.02,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 22,
   },{
     nombre_comercial: 'empaque carton p/tarro sunrise',
@@ -222,6 +253,7 @@ const dataRows = [
     unidad: 'pza.',
     precio_us_dll: 0.01,
     precio_mx_peso: 0.00,
+    cantidad:0.00,
     existencia_almacen: 2,
   }
 ];
