@@ -28,8 +28,3 @@ module.exports = {
   production: prodConfig
 }
 //Aqui termina configutscion produccion Travis
-
-module.exports = {		//Aqui exporto el modulo
- development: devConfig,
- production: {}
-};

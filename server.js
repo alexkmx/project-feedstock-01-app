@@ -26,10 +26,11 @@ const app = express();
 //Inicio codigo Travis
 let dbConnectionConfig
 
-if( process.env.NODE_ENV === 'development' ){
-  dbConnectionConfig = dbConfigObj.development
+if( process.env.NODE_ENV === 'production' ){
+  dbConnectionConfig = dbConfigObj.production
 } else {
-   dbConnectionConfig = dbConfigObj.production
+  dbConnectionConfig = dbConfigObj.development
+
 }
 
 const appDb = connectToDb(dbConnectionConfig)
