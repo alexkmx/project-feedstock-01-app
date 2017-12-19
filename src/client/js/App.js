@@ -41,7 +41,7 @@ class App extends React.Component {
 
   handleAuthentication(credentials) {
     request
-      .set('Content-Type','application/json')
+      // .set('Content-Type','application/json')
       .post('auth/login')
       .send(credentials)
       .then(data => {
