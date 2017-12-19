@@ -23,7 +23,19 @@ const { configDeserializeUser, configSerializeUser } = require('./src/helpers/pa
 
 const app = express();
 
-const appDb = connectToDb(dbConfigObj.development);
+//Inicio codigo Travis
+let dbConnectionConfig
+
+if( process.env.NODE_ENV === 'development' ){
+  dbConnectionConfig = dbConfigObj.development
+} else {
+   dbConnectionConfig = dbConfigObj.production
+}
+
+const appDb = connectToDb(dbConnectionConfig)
+// FIN codigo TRavis
+// y comento la linea de abajo
+// const appDb = connectToDb(dbConfigObj.development);
 
 Model.knex(appDb);
 app.locals.db = appDb;

@@ -15,6 +15,19 @@ seeds:{
 }
 };
 
+// Configuracion de producción travis (after devConfig)
+
+const prodConfig = Object.assign(
+  {},
+  devConfig,
+  { client: 'pg', connection: process.env.DATABASE_URL}
+)
+
+module.exports = {
+  development: devConfig,
+  production: prodConfig
+}
+//Aqui termina configutscion produccion Travis
 
 module.exports = {		//Aqui exporto el modulo
  development: devConfig,
