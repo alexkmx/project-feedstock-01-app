@@ -41,6 +41,7 @@ class App extends React.Component {
 
   handleAuthentication(credentials) {
     request
+      .set('Content-Type','application/json')
       .post('auth/login')
       .send(credentials)
       .then(data => {
@@ -83,7 +84,7 @@ class App extends React.Component {
   }
 
   render (){
-    
+
         return <div>
     <Nav
         cerrarSesion={this.handleLogout}
