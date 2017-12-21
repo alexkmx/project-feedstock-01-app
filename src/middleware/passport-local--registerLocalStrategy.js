@@ -15,9 +15,11 @@ async function  localStrategyHandler(inputEmail, inputPassword, doneCb) {
       .first()
       .returning('*')
 
+    console.log("TEST queried user --", user)
     if(!user){ return doneCb(null, false, `not a valid user pass`) }
 
     const isValidPassword = await user.verifyPassword(inputPassword)
+    console.log("TEST user valid pw --", isValidPassword)
 
     if(!isValidPassword){ return doneCb(null, false, `incorrect user password`) }
 
