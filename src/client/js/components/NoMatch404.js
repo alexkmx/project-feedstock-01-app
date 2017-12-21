@@ -1,6 +1,5 @@
 import React from 'react';
 import {Card, CardTitle} from 'react-materialize';
-import maze from './imagenes/maze.jpg';
 import './css/NoMatch404.css';
 import {Button, Icon} from 'react-materialize';
 

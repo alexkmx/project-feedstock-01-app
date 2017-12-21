@@ -3,11 +3,11 @@ import React from 'react';
 
 //Assests
 import './css/About.css';
-import lab from './imagenes/lab.jpg';
-import sumi from './imagenes/suministro.jpg';
-import formula from './imagenes/naturalproduct.jpg';
-import deliver from './imagenes/deliver.jpg';
-import price from './imagenes/price.jpg';
+const labImg = '/imagenes/lab.jpg';
+const sumiImg = '/imagenes/suministro.jpg';
+const formulaImg = '/imagenes/naturalproduct.jpg';
+const deliverImg = '/imagenes/deliver.jpg';
+const priceImg = '/imagenes/price.jpg';
 
 //Materialize
 import {Button, Icon, Carousel, Slider, Slide} from 'react-materialize'

@@ -9,7 +9,7 @@
     "dev:server": "NODE_ENV=development nodemon server.js --watch src --watch server.js --ignore src/client",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack -p",
+    "build": "./node_modules/.bin/webpack -p --env.NODE_ENV=production",
     "reseed": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   },
   "author": "",
