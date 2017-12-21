@@ -1,5 +1,7 @@
+const bcrypt = require('bcrypt')
+
 const dataRows = [
-  { email: 'usuario@feedstock.com', password: 12345 }
+  { email: 'usuario@feedstock.com', password: bcrypt.hashSync('12345', 12) }
 ];
 
 exports.seed = function(knex, Promise) {
